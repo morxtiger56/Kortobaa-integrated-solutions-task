@@ -1,6 +1,50 @@
-<header class="container mx-auto flex py-4 font-Cairo">
-    <img src="../../assets/Logo.svg" alt="Main Logo">
-    <div>
-        <app-input></app-input>
+<header class="bg-white py-4 font-Cairo text-xs text-primary">
+    <div class="container mx-auto flex gap-7">
+        <a href="/">
+            <img src="../../assets/Logo.svg" alt="Main Logo">
+        </a>
+        <div class="flex flex-grow justify-between gap-3">
+            <label class="hidden flex-grow items-center gap-2 rounded-lg bg-primary/5 px-2 text-secondary md:flex">
+                <ng-icon name="featherSearch" />
+                <input
+                    class="flex-grow rounded-md bg-transparent py-1 focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    value="عم تبحث ؟" />
+            </label>
+            <div class="flex flex-grow justify-end gap-3 md:flex-grow-0">
+                <button type="button" class="flex items-center justify-center rounded-lg bg-primary/5 px-2 py-1">
+                    <ng-icon name="featherUser" />
+                </button>
+                <button type="button" class="flex items-center gap-3 rounded-lg bg-primary/5 px-2 py-1 ">
+                    <span class="hidden md:block">
+                        سلة التسوق
+                    </span>
+                    <ng-icon name="featherShoppingCart" />
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto">
+        <label class="my-2 flex flex-grow items-center gap-2 rounded-lg bg-primary/5 px-2 text-primary md:hidden">
+                <ng-icon name="featherSearch" />
+            <input
+                class="flex-grow rounded-md bg-transparent py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                value="عم تبحث ؟" />
+        </label>
     </div>
 </header>
+<div class="bg-primary/5">
+    <div class="container mx-auto flex text-base font-thin text-primary">
+        <button type="button" class="bg-secondary/10 px-5 py-3 font-bold">
+            الرئيسية
+        </button>
+        <button type="button" class="px-5 py-3">
+            قائمة الأمنيات
+        </button>
+        <button type="button" class="px-5 py-3">
+            تواصل معنا
+        </button>
+        <button type="button" class="px-5 py-3">
+            من نحن
+        </button>
+    </div>
+</div>

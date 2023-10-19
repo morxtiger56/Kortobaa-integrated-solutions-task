@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
 
 @Component({
-    selector: 'app-input',
+    selector: 'k-input',
     templateUrl: './input.component.html',
+    imports:[CommonModule],
+    standalone: true,
     styleUrls: ['./input.component.css'],
 })
 export class InputComponent {
-    name = "search"
+    @Input() name = "search"
 }
