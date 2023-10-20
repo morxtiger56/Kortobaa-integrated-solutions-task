@@ -4,22 +4,24 @@
             <img src="../../assets/Logo.svg" alt="Main Logo">
         </a>
         <div class="flex flex-grow justify-between gap-3">
-            <label class="hidden flex-grow items-center gap-2 rounded-lg bg-primary/5 px-2 text-secondary md:flex">
+            <label for="search" class="hidden flex-grow items-center gap-2 rounded-lg bg-primary/5 px-2 text-secondary md:flex">
                 <ng-icon name="featherSearch" />
                 <input
-                    class="flex-grow rounded-md bg-transparent py-1 focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                    value="عم تبحث ؟" />
+                name="search"
+                id="search"
+                    class="flex-grow rounded-md bg-transparent py-1 placeholder:text-primary focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    placeholder="عم تبحث ؟" />
             </label>
             <div class="flex flex-grow justify-end gap-3 md:flex-grow-0">
-                <button type="button" class="flex items-center justify-center rounded-lg bg-primary/5 px-2 py-1">
+                <k-button variation="secoundry" innerClass="h-full">
                     <ng-icon name="featherUser" />
-                </button>
-                <button type="button" class="flex items-center gap-3 rounded-lg bg-primary/5 px-2 py-1 ">
+                </k-button>
+                <k-button variation="secoundry" innerClass="h-full">
                     <span class="hidden md:block">
                         سلة التسوق
                     </span>
                     <ng-icon name="featherShoppingCart" />
-                </button>
+                </k-button>
             </div>
         </div>
     </div>
@@ -33,7 +35,7 @@
     </div>
 </header>
 <div class="bg-primary/5">
-    <div class="container mx-auto flex text-base font-thin text-primary">
+    <div class="container mx-auto flex border-l border-r border-white px-0 text-base font-thin text-primary">
         <button type="button" class="bg-secondary/10 px-5 py-3 font-bold">
             الرئيسية
         </button>

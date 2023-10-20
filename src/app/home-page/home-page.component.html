@@ -1,3 +1,27 @@
-<div class="container mx-auto py-4 font-Cairo">
+<section class="w-full">
+    <img src="/assets/offers.png" class="w-full" alt="offers">
+</section>
 
-</div>
+<section class="container mx-auto flex flex-col py-4 md:flex-row">
+    <div class="min-w-[300px]">
+        <h1>منتجات تصفحتها مؤخرا</h1>
+    </div>
+    <div class="grid gap-4">
+        <div class="flex items-center gap-4">
+            <h1>وصل حديثا</h1>
+            <hr class="felx flex-grow bg-[#f6f6f6]" />
+            <k-button variation="outline" innerClass="w-full" class="min-w-[150px]">
+                عرض الكل
+            </k-button>
+        </div>
+        <div class="flex flex-wrap justify-center gap-2">
+            <k-card title="تيشيرت " [price]="90.00" [rating]="3" />
+            <k-card title="تيشيرت " [price]="90.00" [rating]="3" />
+            <k-card title="تيشيرت " [price]="90.00" [rating]="3" />
+            <k-card title="تيشيرت " [price]="90.00" [rating]="3" />
+            <k-card title="تيشيرت " [price]="90.00" [rating]="3" />
+            <k-card title="تيشيرت " [price]="90.00" [rating]="3" />
+            <k-card title="تيشيرت " [price]="90.00" [rating]="3" />
+        </div>
+    </div>
+</section>
