@@ -1,10 +1,21 @@
-<section class="w-full">
-    <img src="/assets/offers.png" class="w-full" alt="offers">
+<section>
+    <k-swiper>
+        <img src="/assets/offers.png" class="w-full flex-grow object-cover" alt="offers">
+        <img src="/assets/offers.png" class="w-full flex-grow object-cover" alt="offers">
+        <img src="/assets/offers.png" class="w-full flex-grow object-cover" alt="offers">
+        <img src="/assets/offers.png" class="w-full flex-grow object-cover" alt="offers">
+    </k-swiper>
 </section>
 
-<section class="container mx-auto flex flex-col py-4 md:flex-row">
-    <div class="min-w-[300px]">
+<section class="container mx-auto flex flex-col gap-4 py-10 md:flex-row">
+    <div class="min-w-[500px]">
         <h1>منتجات تصفحتها مؤخرا</h1>
+        <div class="grid gap-2">
+            <k-card variation="mini" title="تيشيرت " [price]="90.00" [rating]="3" />
+            <k-card variation="mini" [originalPrice]="150.00" title="تيشيرت " [price]="90.00" [rating]="3" />
+            <k-card variation="mini" title="تيشيرت " [price]="90.00" [rating]="3" />
+            <k-card variation="mini" title="تيشيرت " [price]="90.00" [rating]="3" />
+        </div>
     </div>
     <div class="grid gap-4">
         <div class="flex items-center gap-4">
@@ -15,7 +26,7 @@
             </k-button>
         </div>
         <div class="flex flex-wrap justify-center gap-2">
-            <k-card title="تيشيرت " [price]="90.00" [rating]="3" />
+            <k-card title="تيشيرت " [originalPrice]="150.00" [price]="90.00" [rating]="3" />
             <k-card title="تيشيرت " [price]="90.00" [rating]="3" />
             <k-card title="تيشيرت " [price]="90.00" [rating]="3" />
             <k-card title="تيشيرت " [price]="90.00" [rating]="3" />

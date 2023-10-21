@@ -1,5 +1,5 @@
-<div
-    class="flex h-full min-w-[300px] max-w-[350px] flex-grow basis-0 flex-col justify-between rounded-xl bg-white px-3 py-3" title="">
+<div *ngIf="variation === 'full'" title=""
+    class="flex h-full min-w-[300px] max-w-[350px] flex-grow basis-0 flex-col justify-between rounded-xl bg-white px-3 py-3">
     <div class="relative">
         <img src="/assets/products/pic.png" alt="">
         <div class="absolute top-0 flex w-full justify-between">
@@ -8,8 +8,8 @@
                     <ng-icon name="matCompareArrowsOutline" />
                 </k-button>
             </k-tooltip>
-            <k-chip variation="secoundry">
-                جديد
+            <k-chip [variation]="originalPrice === 0 ? 'secoundry': 'tertairy'">
+                {{originalPrice !== 0 ? "عرض": "جديد"}}
             </k-chip>
         </div>
     </div>
@@ -20,7 +20,7 @@
                 <ng-icon name="heroStarSolid" color="#eaeaea" />
             </span>
         </div>
-        <caption class="text-xs text-[#888] line-through">
+        <caption *ngIf="originalPrice !== 0" class="text-xs text-secondary line-through">
             {{originalPrice}} ج.م
         </caption>
         <p class="font-bold">
@@ -32,6 +32,48 @@
                     <ng-icon name="matAddShoppingCartOutline" />
                 </span>
                 أضف للسلة
+            </k-button>
+            <k-button variation="ghost">
+                <ng-icon name="matShareOutline" />
+            </k-button>
+            <k-button variation="ghost">
+                <ng-icon name="matFavoriteBorderOutline" />
+            </k-button>
+        </div>
+    </div>
+</div>
+
+
+<div *ngIf="variation === 'mini'" class="flex flex-grow basis-0 gap-4 rounded-xl bg-white px-3 py-3">
+    <div class="relative">
+        <img src="/assets/products/pic.png" alt="" class="max-h-[140px]">
+        <div class="absolute top-0 flex w-full justify-between">
+            <k-tooltip body="أضف للمقارنة">
+                <k-button variation="ghost">
+                    <ng-icon name="matCompareArrowsOutline" />
+                </k-button>
+            </k-tooltip>
+            <k-chip [variation]="originalPrice === 0 ? 'secoundry': 'tertairy'">
+                {{originalPrice !== 0 ? "عرض": "جديد"}}
+            </k-chip>
+        </div>
+    </div>
+    <div class="grid flex-grow justify-items-start gap-1">
+        <h3>{{title}}</h3>
+        <div class="flex gap-1">
+            <span *ngFor="let item of [].constructor(5); let i = index" class="text-lg">
+                <ng-icon name="heroStarSolid" color="#eaeaea" />
+            </span>
+        </div>
+        <caption *ngIf="originalPrice !== 0" class="text-xs text-secondary line-through">
+            {{originalPrice}} ج.م
+        </caption>
+        <p class="font-bold">
+            {{price}} ج.م
+        </p>
+        <div class="flex w-full justify-between gap-2">
+            <k-button class="flex flex-grow" variation="ghost" >
+                <ng-icon name="matAddShoppingCartOutline" color="#302CA2" />
             </k-button>
             <k-button variation="ghost">
                 <ng-icon name="matShareOutline" />

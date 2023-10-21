@@ -24,4 +24,5 @@ export class CardComponent {
     @Input() imageUrl = "";
     @Input() price = 0;
     @Input() rating = 0;
+    @Input() variation: "full" | "mini" = "full";
 }
