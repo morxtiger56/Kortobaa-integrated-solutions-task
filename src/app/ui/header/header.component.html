@@ -1,52 +1,59 @@
 <header class="bg-white py-4 font-Cairo text-xs text-primary">
     <div class="container mx-auto flex gap-7">
         <a href="/">
-            <img src="../../assets/Logo.svg" alt="Main Logo">
+            <img src="../../assets/Logo.svg" alt="Main Logo" />
         </a>
         <div class="flex flex-grow justify-between gap-3">
-            <label for="search" class="hidden flex-grow items-center gap-2 rounded-lg bg-primary/5 px-2 text-secondary md:flex">
+            <label
+                for="search"
+                class="hidden flex-grow items-center gap-2 rounded-lg bg-primary/5 px-2 text-secondary md:flex"
+            >
                 <ng-icon name="featherSearch" />
                 <input
-                name="search"
-                id="search"
+                    name="search"
+                    id="search"
                     class="flex-grow rounded-md bg-transparent py-1 placeholder:text-primary focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                    placeholder="عم تبحث ؟" />
+                    placeholder="عم تبحث ؟"
+                />
             </label>
             <div class="flex flex-grow justify-end gap-3 md:flex-grow-0">
                 <k-button variation="secoundry" innerClass="h-full">
                     <ng-icon name="featherUser" />
                 </k-button>
                 <k-button variation="secoundry" innerClass="h-full">
-                    <span class="hidden md:block">
-                        سلة التسوق
-                    </span>
+                    <span class="hidden md:block"> سلة التسوق </span>
                     <ng-icon name="featherShoppingCart" />
                 </k-button>
             </div>
         </div>
     </div>
     <div class="container mx-auto">
-        <label class="my-2 flex flex-grow items-center gap-2 rounded-lg bg-primary/5 px-2 text-primary md:hidden">
-                <ng-icon name="featherSearch" />
+        <label
+            title="search"
+            class="my-2 flex flex-grow items-center gap-2 rounded-lg bg-primary/5 px-2 text-primary md:hidden"
+        >
+            <ng-icon name="featherSearch" />
             <input
                 class="flex-grow rounded-md bg-transparent py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-transparent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                value="عم تبحث ؟" />
+                value="عم تبحث ؟"
+            />
         </label>
     </div>
 </header>
 <div class="bg-primary/5">
-    <div class="container mx-auto flex border-l border-r border-white px-0 text-base font-thin text-primary">
+    <div
+        class="container mx-auto flex border-l border-r border-white px-0 text-base font-thin text-primary"
+    >
+        <select title="department" class="hover:bg-secondary/10 bg-transparent px-5 py-3 " name="department" id="department">
+            <option value="" disabled selected>الاقسام</option>
+            <option value="cloths">ملابس</option>
+            <option value="mobiles">موبيلات</option>
+        </select>
         <button type="button" class="bg-secondary/10 px-5 py-3 font-bold">
             الرئيسية
         </button>
-        <button type="button" class="px-5 py-3">
-            قائمة الأمنيات
-        </button>
-        <button type="button" class="px-5 py-3">
-            تواصل معنا
-        </button>
-        <button type="button" class="px-5 py-3">
-            من نحن
-        </button>
+        <button type="button" class="px-5 py-3 hover:bg-secondary/10 ">قائمة الأمنيات</button>
+        <button type="button" class="px-5 py-3 hover:bg-secondary/10 ">تواصل معنا</button>
+        <button type="button" class="px-5 py-3 hover:bg-secondary/10 ">من نحن</button>
     </div>
 </div>
